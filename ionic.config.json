@@ -1,0 +1,8 @@
+{
+  "name": "pandas-and-dragons",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
