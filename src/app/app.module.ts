@@ -9,7 +9,6 @@ import { MyApp } from './app.component';
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
-import { CharacterSheetPage } from '../pages/character-sheet/character-sheet';
 
 // Components imports
 import { StatusBar } from '@ionic-native/status-bar';
@@ -21,7 +20,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HelloIonicPage,
     ItemDetailsPage,
     ListPage,
-    CharacterSheetPage
   ],
   imports: [
     BrowserModule,

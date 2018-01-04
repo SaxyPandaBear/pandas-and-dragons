@@ -1,23 +1,18 @@
+import { Serializable } from "./serializable";
+
 /**
  * Class that defines all of the data components to a 
  * character sheet
  */
-export class CharacterData {
+export class CharacterData implements Serializable<CharacterData> {
+    // TODO: map out information needed for a CharData object
 
-    /**
-     * Returns a JSON blob of the data stored in this object
-     * so that it can be written to the local database properly.
-     */
-    public convertCharDataToJSON() {
-        
+    // TODO: finish serialize and deserialize after information figured out
+    public serialize(input: CharacterData): Object {
+        return null;
     }
 
-    /**
-     * Takes a json object (from the database), then constructs and returns a corresponding
-     * CharacterData object from the parameter
-     * @param jsonBlob JSON object read from database
-     */
-    public static convertJSONToCharData(jsonBlob: any): CharacterData {
-        return null; // TODO: finish this
+    public deserialize(input: Object): CharacterData {
+        return null;
     }
 }
