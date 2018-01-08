@@ -23,11 +23,10 @@ export class ItemDetailsPage {
     //   });
     this.characterData = this.getDummyData();
   }
-  
+
   private getDummyData(): CharacterStats {
     let stats = new CharacterStats();
-    stats.playerName = 'FooBar Baz';
-    stats.charName = 'Bar Foo';
+    stats.charName = 'Foo BarBaz';
     stats.charClass = 'Fighter';
     stats.level = 5;
     stats.background = 'Noble';

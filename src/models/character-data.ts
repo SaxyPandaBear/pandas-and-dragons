@@ -5,7 +5,6 @@ import { Serializable } from "./serializable";
  * character sheet
  */
 export class CharacterStats implements Serializable<CharacterStats> {
-    playerName: string;
     charName: string;
     charClass: string;
     level: number;

@@ -14,14 +14,19 @@ export class ListPage {
     // connect to storage and fetch all of the names of the items stored, 
     // putting them in the characters array
     // note: the way this is set up, this would not allow characters with the same name.
-    this.storage.keys()
-      .then((keys: string[]) => {
-        this.characters = keys;
-      })
-      .catch((error) => {
-        console.log(error);
-      }
-    );
+    // this.storage.keys()
+    //   .then((keys: string[]) => {
+    //     this.characters = keys;
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   }
+    // );
+    this.characters = this.getDummyList();
+  }
+
+  private getDummyList(): Array<string> {
+    return ['Foo Bar'];
   }
 
   itemTapped(event, item: string) {
