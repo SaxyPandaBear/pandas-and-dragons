@@ -26,7 +26,7 @@ export class ListPage {
   }
 
   private getDummyList(): Array<string> {
-    return ['Foo Bar'];
+    return ['Foo Bar', 'A B', 'C D', 'Lyanna Everiss'];
   }
 
   itemTapped(event, item: string) {
