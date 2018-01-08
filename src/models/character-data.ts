@@ -6,10 +6,10 @@ import { Serializable } from "./serializable";
  */
 export class CharacterStats implements Serializable<CharacterStats> {
     playerName: string;
+    charName: string;
     charClass: string;
     level: number;
     background: string;
-    charName: string;
     race: string;
     alignment: string;
     experiencePoints: number;
@@ -67,7 +67,8 @@ export class CharacterStats implements Serializable<CharacterStats> {
     hpCurrent: number;
     hpTemp: number;
 
-    numHitDice: number;
+    hitDiceCurrent: number; // hit dice can be expended for healing
+    hitDiceMax: number; // same as level
     passivePerception: number;
 
     /**
