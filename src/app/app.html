@@ -2,7 +2,8 @@
 
   <ion-header>
     <ion-toolbar>
-      <ion-title>Pages</ion-title>
+      <!-- TODO: get a banner or logo to put here -->
+      <ion-title>Logo</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -13,6 +14,15 @@
       </button>
     </ion-list>
   </ion-content>
+
+  <ion-footer>
+    <ion-toolbar>
+        <button ion-button block icon-right (click)="navSettingsPage($event)" class="setting-button">
+          Settings
+          <ion-icon name="settings"></ion-icon>
+        </button>
+    </ion-toolbar>
+  </ion-footer>
 
 </ion-menu>
 

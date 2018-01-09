@@ -9,10 +9,12 @@ import { MyApp } from './app.component';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
 import { DiceRollerPage } from '../pages/dice-roller/dice-roller';
+import { SettingsPage } from '../pages/settings/settings';
 
 // Components imports
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     DiceRollerPage,
     ItemDetailsPage,
     ListPage,
+    SettingsPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     DiceRollerPage,
     ItemDetailsPage,
-    ListPage
+    ListPage,
+    SettingsPage
   ],
   providers: [
     StatusBar,

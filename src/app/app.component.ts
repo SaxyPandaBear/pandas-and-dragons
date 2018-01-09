@@ -4,11 +4,10 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 
 import { DiceRollerPage } from '../pages/dice-roller/dice-roller';
 import { ListPage } from '../pages/list/list';
+import { SettingsPage } from '../pages/settings/settings';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
-
 
 @Component({
   templateUrl: 'app.html'
@@ -49,5 +48,10 @@ export class MyApp {
     this.menu.close();
     // navigate to the new page if it is not the current page
     this.nav.setRoot(page.component);
+  }
+
+  navSettingsPage(event) {
+    this.menu.close(); // close menu before navigating
+    this.nav.push(SettingsPage); // use ViewChild to navigate to settings page
   }
 }
