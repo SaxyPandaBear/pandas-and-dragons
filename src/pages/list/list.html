@@ -1,16 +1,31 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
+    <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>Characters</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="attemptAddCharacter()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let char of characters" (click)="itemTapped($event, item)">
-      {{char}}
-    </button>
+    <ion-item-sliding *ngFor="let char of characters">
+      <ion-item (click)="itemTapped($event, item)">
+        {{char}}
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="attemptDeleteCharacter(char)" 
+            style="padding-right: 15px; padding-left: 15px;">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
   </ion-list>
 </ion-content>
