@@ -16,12 +16,12 @@
 
 <ion-content>
   <ion-list>
-    <ion-item-sliding *ngFor="let char of characters">
-      <ion-item (click)="itemTapped($event, item)">
-        {{char}}
+    <ion-item-sliding *ngFor="let name of characterNames">
+      <ion-item (click)="itemTapped($event, name)">
+        {{name}}
       </ion-item>
       <ion-item-options side="right">
-        <button ion-button color="danger" (click)="attemptDeleteCharacter($event, char)" 
+        <button ion-button color="danger" (click)="attemptDeleteCharacter($event, name)" 
             style="padding-right: 15px; padding-left: 15px;">
           <ion-icon name="trash"></ion-icon>
         </button>

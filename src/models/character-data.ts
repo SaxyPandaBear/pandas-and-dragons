@@ -5,6 +5,7 @@ import { Serializable } from "./serializable";
  * character sheet
  */
 export class CharacterStats implements Serializable<CharacterStats> {
+    uuid: string; // this is actually used as the key for Storage
     charName: string;
     charClass: string;
     level: number;
@@ -87,7 +88,29 @@ export class CharacterStats implements Serializable<CharacterStats> {
     // if true, spread out currency to use up the least amount of coins
     redistributeCurrency: boolean;
 
+    // TODO: add way to associate an image to a character
+
     // TODO: needs attacks, spells, equipment, character traits
+
+    public constructor() {
+        // generate a UUID in the constructor
+        // this can (will) be written over in a deserialize() call
+        this.uuid = this.generateUUID();
+    }
+
+    // https://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript/8809472#8809472
+    // I prefer this solution over adding an NPM package dependency
+    private generateUUID () { // Public Domain/MIT
+        let d = Date.now();
+        if (typeof performance !== 'undefined' && typeof performance.now === 'function'){
+            d += performance.now(); //use high-precision timer if available
+        }
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+            let r = (d + Math.random() * 16) % 16 | 0;
+            d = Math.floor(d / 16);
+            return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+        });
+    }
 
     /**
      * takes a value and adds it to the character's total experience points
