@@ -7,7 +7,7 @@
     </ion-buttons>
     <ion-title>Characters</ion-title>
     <ion-buttons right>
-      <button ion-button (click)="attemptAddCharacter()">
+      <button ion-button (click)="addCharacter($event)">
         <ion-icon name="add-circle"></ion-icon>
       </button>
     </ion-buttons>
@@ -21,7 +21,7 @@
         {{char}}
       </ion-item>
       <ion-item-options side="right">
-        <button ion-button color="danger" (click)="attemptDeleteCharacter(char)" 
+        <button ion-button color="danger" (click)="attemptDeleteCharacter($event, char)" 
             style="padding-right: 15px; padding-left: 15px;">
           <ion-icon name="trash"></ion-icon>
         </button>
