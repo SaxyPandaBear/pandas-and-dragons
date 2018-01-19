@@ -8,10 +8,12 @@ export class CharacterStats implements Serializable<CharacterStats> {
     uuid: string; // this is actually used as the key for Storage
     charName: string;
     charClass: string;
+    age: number;
+    eyeColor: string;
     level: number;
     background: string;
     race: string;
-    alignment: string;
+    alignment: string; // although enum defined, value will be string for convenience
     experiencePoints: number;
     
     strength: number;
@@ -203,4 +205,16 @@ export class CharacterStats implements Serializable<CharacterStats> {
 
 export enum AbilityScore {
     STR, DEX, CON, INT, WIS, CHA
+}
+
+export enum Alignment {
+    LAWFUL_GOOD = 'Lawful Good',
+    NEUTRAL_GOOD = 'Neutral Good',
+    CHAOTIC_GOOD = 'Chaotic Good',
+    LAWFUL_NEUTRAL = 'Lawful Neutral',
+    NEUTRAL = 'Neutral',
+    CHAOTIC_NEUTRAL = 'Chaotic Neutral',
+    LAWFUL_EVIL = 'Lawful Evil',
+    NEUTRAL_EVIL = 'Neutral Evil',
+    CHAOTIC_EVIL = 'Chaotic Evil'
 }

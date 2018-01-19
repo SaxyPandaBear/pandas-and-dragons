@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { Roll } from '../../models/roll';
 
 @Component({
   selector: 'page-dice-roller',
@@ -7,7 +8,7 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class DiceRollerPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private dice: Roll) {
   }
 
   ionViewDidLoad() {
